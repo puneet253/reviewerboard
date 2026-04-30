@@ -1,78 +1,62 @@
-# Puneet Portfolio (GitHub Pages Ready)
+# Puneet Portfolio (GitHub Pages Setup)
 
-Agar `http://puneet253.github.io/puneetportfolio/` par 404 aa raha hai, to usually issue GitHub Pages settings ka hota hai. Neeche exact fix diya hai.
+Aap abhi galat screen par ho: **"Pages / Add a verified domain"**.
+Waha domain tabhi add hota hai jab aapke paas apna खरीदा हुआ custom domain ho (jaise `example.com`).
+`puneet253.github.io/puneetportfolio` custom domain nahi hai.
 
-## ✅ Sahi live URL (HTTP nahi, HTTPS use karo)
+## Aapko kya karna hai (sirf ye follow karo)
 
-Use this:
+## 1) Repo open karo
+
+- `https://github.com/puneet253/puneetportfolio`
+
+## 2) Correct page par jao
+
+- **Settings → Pages**
+- **Add verified domain** wali screen se back jao.
+
+## 3) Pages enable karo
+
+**Build and deployment** section me ye set karo:
+
+- Source: **Deploy from a branch**
+- Branch: **main**
+- Folder: **/ (root)**
+
+Fir **Save** karo.
+
+## 4) Live URL
+
+Sahi URL hoga:
 
 - `https://puneet253.github.io/puneetportfolio/`
 
-> `http://` par kabhi-kabhi redirect/404 issue aa sakta hai, isliye direct `https://` open karo.
+> HTTP (`http://`) mat use karo, direct HTTPS use karo.
 
-## 1) Confirm repo name exactly same hai
+## 5) 404 aaye to ye check karo
 
-GitHub me repo ka naam **exactly** ye hona chahiye:
+1. Repo public hai.
+2. `index.html` repo root me hai.
+3. `main` branch par latest code push hai.
+4. Pages settings me `main` + `/root` selected hai.
+5. 2–10 min wait karke hard refresh karo.
 
-- `puneetportfolio`
-
-Agar repo ka naam alag hai (jaise `PuneetPortfolio` ya `portfolio`), URL bhi उसी हिसाब se change hoga.
-
-## 2) Code `main` branch me hona chahiye
-
-Repo ke root me ye files honi chahiye:
-
-- `index.html`
-- `styles.css`
-- `script.js`
-
-Agar local se push karna hai:
+## 6) Local se push commands
 
 ```bash
-git remote add origin https://github.com/puneet253/puneetportfolio.git
+git remote -v
 git branch -M main
 git add .
-git commit -m "portfolio setup"
+git commit -m "portfolio update"
 git push -u origin main
 ```
 
-## 3) GitHub Pages enable karo (most important)
+## 7) Files to edit
 
-1. Repo open karo: `https://github.com/puneet253/puneetportfolio`
-2. Jao: **Settings → Pages**
-3. **Build and deployment** me set karo:
-   - Source: **Deploy from a branch**
-   - Branch: **main**
-   - Folder: **/ (root)**
-4. **Save** karo.
+- `index.html` → content
+- `styles.css` → design
+- `script.js` → footer year
 
-## 4) Deployment status check karo
+---
 
-Settings → Pages me message aana chahiye:
-
-- “Your site is live at `https://puneet253.github.io/puneetportfolio/`”
-
-First deploy ko 2–10 min lag sakte hain. Uske baad page hard refresh karo:
-
-- Windows/Linux: `Ctrl + Shift + R`
-- Mac: `Cmd + Shift + R`
-
-## 5) Agar phir bhi 404 aa raha hai
-
-Ye 5 cheeze check karo:
-
-1. Repo **public** hai (private repo me Pages limits ho sakti hain plan ke hisaab se).
-2. `index.html` root me hai, kisi subfolder me nahi.
-3. Pages source `main` + `/root` selected hai.
-4. URL me typo nahi hai: `puneet253.github.io/puneetportfolio/`
-5. Browser cache clear/hard refresh kiya.
-
-## 6) Quick update workflow
-
-```bash
-git add .
-git commit -m "update portfolio"
-git push
-```
-
-Push ke baad 1-2 min me live site update ho jayegi.
+Agar chaho to next message me main aapko exactly bata dunga ki Pages screen par kaunsa option kis dropdown me select karna hai (line-by-line).
